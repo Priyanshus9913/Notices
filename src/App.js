@@ -7,12 +7,12 @@ export default function App() {
   const show2=()=>{
     document.getElementById('c1').style.display="none";
    document.getElementById('c2').style.display="inline";
-   document.body.style.backgroundImage = "url(images/img2.png)";
+   document.body.style.backgroundImage = "url(/images/img2.png)";
    }
    const show1=()=>{
        document.getElementById('c2').style.display="none";
        document.getElementById('c1').style.display="inline";
-       document.body.style.backgroundImage = "url(images/img1.png)"; 
+       document.body.style.backgroundImage = "url(/images/img1.png)"; 
    }
   return (
     <div>
