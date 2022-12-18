@@ -1,4 +1,8 @@
 import logo from './logo.svg';
+import arrow1 from './arrow1.png'
+import arrow2 from './arrow2.png'
+import img2 from './img2.png'
+import img1 from './img1.png'
 import './App.css';
 import './style.css'
 import React from 'react'
@@ -7,20 +11,20 @@ export default function App() {
   const show2=()=>{
     document.getElementById('c1').style.display="none";
    document.getElementById('c2').style.display="inline";
-   document.body.style.backgroundImage = "url(/images/img2.png)";
+   document.body.style.backgroundImage = {img2};
    }
    const show1=()=>{
        document.getElementById('c2').style.display="none";
        document.getElementById('c1').style.display="inline";
-       document.body.style.backgroundImage = "url(/images/img1.png)"; 
+       document.body.style.backgroundImage = {img1}; 
    }
   return (
     <div>
-      <div class="Contain">
-      <div class="left">
-        <img width="50%"height="10%"src="images/Vector (1).png" alt="" onclick={show1}/>
+      <div className="Contain">
+      <div className="left">
+        <img width="50%"height="10%"src={arrow1} alt="" onClick={show1}/>
       </div>
-      <div class="content1" id="c1">
+      <div className="content1" id="c1">
       <h1>Hall Notices</h1>
       <br/>
       <br/>
@@ -42,7 +46,7 @@ export default function App() {
       <br/>
       <h1>Warden</h1>
     </div>
-    <div class="content2" id="c2">
+    <div className="content2" id="c2">
       <h1>Institute Notices</h1>
       <br/>
       <br/>
@@ -66,8 +70,8 @@ export default function App() {
      <br/>
      <br/>
     </div>
-    <div class="right">
-      <img width="50%"height="10%"src="images/Vector.png" alt="" onclick={show2}/>
+    <div className="right">
+      <img width="50%"height="10%"src={arrow2} alt="" onClick={show2}/>
   </div>
   </div>
     </div>
